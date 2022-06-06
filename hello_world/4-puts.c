@@ -1,6 +1,8 @@
 #include<stdio.h>
 /**
- * @brief description
+ * main - it prints a string using the puts function
+ *
+ * Return: 0
  */
 int main(void)
 {

@@ -1,6 +1,8 @@
 #include<stdio.h>
 /**
- * @brief description
+ * main - it prints a string
+ *
+ * Return: 0
  */
 int main(void)
 {

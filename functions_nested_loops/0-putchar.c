@@ -11,9 +11,10 @@ int main(void)
 	int n, i;
 
 	n = sizeof(text) / sizeof(text[0]);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		_putchar(text[i]);
 	}
+	_putchar('\n');
 	return (0);
 }

@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * *leet - switches characters in input string
  * @a: input string

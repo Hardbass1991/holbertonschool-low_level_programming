@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * puts_half -  prints every other character of input string
  * @str: input string
@@ -14,7 +13,6 @@ void puts_half(char *str)
 	i = 0;
 	while (str[n])
 		n++;
-	printf("%d\n", n);
 	if (n % 2 == 0)
 		for (i = n / 2; i < n; i++)
 			_putchar(str[i]);

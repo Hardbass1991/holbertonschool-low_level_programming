@@ -12,7 +12,6 @@ int main(void)
 		if (612852475143 % i == 0)
 		{
 			n = 612852475143 / i;
-			printf("%ld\n", n);
 			prime = 1;
 			for (j = 2; j < n / 2; j++)
 				if (n % j == 0)
@@ -22,7 +21,7 @@ int main(void)
 				}
 			if (prime == 1)
 			{
-				printf("%ld", n);
+				printf("%ld\n", n);
 				break;
 			}
 		}

@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *leet - switches characters in input string
+ * *leet - translates characters in input string to leet-style writing
  * @a: input string
  *
  * Return: converted string

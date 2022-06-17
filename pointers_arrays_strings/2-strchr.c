@@ -10,17 +10,16 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0, found = 0;
+	int i = 0, n = 0, found = 0;
 
-	while (s[i])
-	{
+	while (s[n])
+		n++;
+	for (i = 0; i <= n; i++)
 		if (s[i] == c)
 		{
 			found = 1;
 			break;
 		}
-		i++;
-	}
 	if (!found)
 		return (NULL);
 	else

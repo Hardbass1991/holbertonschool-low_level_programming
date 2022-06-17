@@ -7,15 +7,15 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, d1 = 0, d2 = 0;
+	int i, d1 = 0, d2 = 0;
 
-	for (i = 0; i < size; i++)
-		for (j = 0; j < size; j++)
-		{
-			if (j == i)
-				d1 += a[i][j];
-			else if (j == size - i + 1)
-				d2 += a[i][j];
-		}
-	printf("%d, %d", d1, d2);
+	for (i = 0; i < size * size; i+= size + 1)
+	{
+		d1 += a[i];
+	}
+	for (i = size - 1; i < size * size - 1; i+= size - 1)
+	{
+		d2 += a[i];
+	}
+	printf("%d, %d\n", d1, d2);
 }

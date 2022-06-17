@@ -16,6 +16,7 @@ char *_strstr(char *haystack, char *needle)
 		m++;
 	while (haystack[n])
 	{
+		found = 0;
 		/* printf("%s %s\n", &haystack[n], &needle[0]);*/
 		for (i = 0; i < m; i++)
 		{
@@ -31,7 +32,6 @@ char *_strstr(char *haystack, char *needle)
 			break;
 		n++;
 	}
-	
 	if (found)
 		return (&haystack[n]);
 	else if (!needle[0])

@@ -25,13 +25,15 @@ char *_strstr(char *haystack, char *needle)
 			}
 			else
 				break;
-		if (found)
+		if (found == m)
 			break;
 		n++;
 	}
-
+	
 	if (found)
 		return (&haystack[n]);
+	else if (needle[0] == "")
+		return (&haystack[0]);
 	else
 		return (NULL);
 }

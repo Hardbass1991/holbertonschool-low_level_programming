@@ -16,15 +16,17 @@ char *_strstr(char *haystack, char *needle)
 		m++;
 	while (haystack[n])
 	{
-		/* printf("%s %s\n", &haystack[n], &needle[0]); */
+		/* printf("%s %s\n", &haystack[n], &needle[0]);*/
 		for (i = 0; i < m; i++)
+		{
 			if (haystack[n + i] == needle[i])
 			{
 				found += 1;
 				/* printf("GAAA\n");*/
+				if (found == m)
+					break;
 			}
-			else
-				break;
+		}
 		if (found == m)
 			break;
 		n++;

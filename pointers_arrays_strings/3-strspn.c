@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * *_strspn - Returns the number of bytes in the initial segment of s 
+ * _strspn - Returns the number of bytes in the initial segment of s
  * which consist only of bytes from accept
  * @s: input string
  * @accept: input string whose elements' repetitions will be counted in s

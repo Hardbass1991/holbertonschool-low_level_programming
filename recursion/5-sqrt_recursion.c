@@ -28,7 +28,7 @@ int binary_search(int a1, int a2, int n)
 {
 	long m = ((a2 - a1) / 2) + a1;
 
-	printf("a1: %d, a2: %d, m: %ld\n", a1, a2, m);
+	/*printf("a1: %d, a2: %d, m: %ld\n", a1, a2, m);*/
 	if (a1 != a2)
 	{
 		if (m * m > n)

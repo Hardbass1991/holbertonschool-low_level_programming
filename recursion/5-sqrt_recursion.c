@@ -12,15 +12,21 @@ int _sqrt_recursion(int n)
 	else if (n == 0 || n == 1)
 		return (n);
 	else
-	{
 		return (binary_search(2, n, n));
-	}
 }
 
+/**
+ * binary_search - returns the square root of a number, or -1
+ * @a1: lower limit of input interval
+ * @a2: upper limit of input interval
+ * @n: number whose square root we are looking for
+ *
+ * Return: square root of n, or -1 if n doesn't have one.
+ */
 int binary_search(int a1, int a2, int n)
 {
 	int m = ((a2 - a1) / 2) + a1;
-	
+
 	if (a1 != a2)
 	{
 		if (m * m > n)

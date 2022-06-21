@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _sqrt_recursion - returns the natural square root of a number.
  * @n: input int
@@ -25,8 +26,9 @@ int _sqrt_recursion(int n)
  */
 int binary_search(int a1, int a2, int n)
 {
-	int m = ((a2 - a1) / 2) + a1;
+	long m = ((a2 - a1) / 2) + a1;
 
+	printf("a1: %d, a2: %d, m: %ld\n", a1, a2, m);
 	if (a1 != a2)
 	{
 		if (m * m > n)

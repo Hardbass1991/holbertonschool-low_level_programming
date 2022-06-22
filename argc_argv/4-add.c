@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - adds positive numbers.
  * @argc: number of arguments
@@ -29,7 +30,19 @@ int main(int argc, char *argv[])
 	else
 	{
 		for (i = 1; i < argc; i++)
-			sum += atoi(argv[i]);
+		{
+			unsigned long int num = atoi(argv[i]);
+			char str[12];
+
+			sprintf(str, "%ld", num);
+			if (strlen(argv[i]) != strlen(str))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else
+				sum += num;
+		}
 		printf("%d\n", sum);
 	}
 	return (0);

@@ -23,6 +23,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		array[i] = malloc(size);
 		array[i] = 0;
 	}
-	free(array);
 	return (array);
 }

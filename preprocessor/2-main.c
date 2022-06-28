@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints out the name of this file
+ *
+ * Return: 0
  */
 int main(void)
 {

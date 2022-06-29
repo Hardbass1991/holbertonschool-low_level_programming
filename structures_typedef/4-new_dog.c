@@ -14,7 +14,6 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p;
-	/**
 	char *name_, *owner_;
 	
 	name_ = malloc(sizeof(name));
@@ -22,7 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy(name_, name);
 	strcpy(owner_, owner);
 	printf("%s\n", name_);
-	printf("%s\n", owner_);*/
+	printf("%s\n", owner_);
 	p = malloc(sizeof(dog_t));
 	if (!p)
 	{

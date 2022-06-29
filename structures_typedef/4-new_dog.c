@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - creates an instance of the structure dog
@@ -12,15 +13,18 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p;
+	char *name_, *owner_;
 
+	strcpy(name_, name);
+	strcpy(owner_, owner);
 	p = malloc(sizeof(dog_t));
 	if (!p)
 	{
 		free(p);
 		return (NULL);
 	}
-	p->name = name;
+	p->name = name_;
 	p->age = age;
-	p->owner = owner;
+	p->owner = owner_;
 	return (p);
 }

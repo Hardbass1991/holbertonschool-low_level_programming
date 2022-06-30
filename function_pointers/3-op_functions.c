@@ -43,7 +43,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- * op_mod: gets the modulo of the division of two numbers
+ * op_mod - gets the modulo of the division of two numbers
  * @a: first number
  * @b: second number
  *

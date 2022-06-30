@@ -5,7 +5,6 @@
 int main(int argc, char *argv[])
 {
 	op_t result;
-	int i = 0;
 
 	if (argc == 4)
 	{

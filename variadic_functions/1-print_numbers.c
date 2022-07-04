@@ -10,10 +10,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list ap;
 
-	va_start(ap, n);
-	printf("%d", va_arg(ap, int));
-	for (i = 1; i < n; i++)
-		printf("%s%d", separator, va_arg(ap, int));
+	if (!separator)
+		separator = "";
+	if (n > 0)
+	{
+		va_start(ap, n);
+		printf("%d", va_arg(ap, int));
+		for (i = 1; i < n; i++)
+			printf("%s%d", separator, va_arg(ap, int));
+		va_end(ap);
+	}
 	printf("\n");
-	va_end(ap);
 }

@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			a = va_arg(ap, char*);
 			if (!a)
-				printf("%sGAAA", separator);
+				printf("%s(nil)", separator);
 			else
 				printf("%s%s", separator, a);
 		}

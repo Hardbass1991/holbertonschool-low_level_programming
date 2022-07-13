@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 /**
  * pop_listint - pops node from beginning of input linked list
@@ -16,6 +17,10 @@ int pop_listint(listint_t **head)
 		return (0);
 	tmp = (*head);
 	tmp_n = tmp->n;
-	(*head) = (*head)->next;
+	if ((*head)->next)
+		(*head) = (*head)->next;
+	else
+		(*head) = NULL;
+	free(tmp);
 	return (tmp_n);
 }

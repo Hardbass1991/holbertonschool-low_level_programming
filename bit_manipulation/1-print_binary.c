@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int unmasker = 1 << 31;
+	int unmasker = 1 << 63;
 	int i, n_, start = 0;
 
 	n_ = n;

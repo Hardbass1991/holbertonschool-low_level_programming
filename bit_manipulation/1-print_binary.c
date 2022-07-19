@@ -6,8 +6,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	int unmasker = 1 << 63;
-	int i, n_, start = 0;
+	unsigned long int unmasker = 1 << 31, n_;
+	int i, start = 0;
 
 	n_ = n;
 	if (n == 0)

@@ -1,5 +1,9 @@
 #include "main.h"
 #include <string.h>
+/**
+ * print_binary - prints binary version of input int
+ * @n: input int
+ */
 void print_binary(unsigned long int n)
 {
 	int unmasker = 1 << 31;
@@ -9,7 +13,7 @@ void print_binary(unsigned long int n)
 	if (n == 0)
 		_putchar('0');
 	else
-		for (i = 0; i < 32; i++)
+		for (i = 0; i < 64; i++)
 		{
 			if (unmasker & n_)
 			{

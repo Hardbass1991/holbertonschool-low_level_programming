@@ -5,6 +5,14 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+/**
+ * read_textfile - reads a text file and prints it to stdout
+ * @filename: string with the name of the file to be used
+ * @letters: number of characters that will be read and printed out
+ *
+ * Return: number of characters successfully read and printed out
+ * Or 0 if anything fails
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, rd, wr;
@@ -24,5 +32,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	wr = write(1, buf, rd);
 	if (wr < 0)
 		return (0);
-	return(wr);
+	close(fd);
+	return (wr);
 }

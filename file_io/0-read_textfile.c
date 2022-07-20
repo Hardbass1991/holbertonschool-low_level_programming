@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <stdio.h>
 
 /**
  * read_textfile - reads a text file and prints it to stdout
@@ -29,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (rd < 0)
 		return (0);
 	buf[letters] = '\0';
-	wr = write(1, buf, rd);
+	wr = write(STDOUT_FILENO, buf, rd);
 	if (wr < 0)
 		return (0);
 	close(fd);

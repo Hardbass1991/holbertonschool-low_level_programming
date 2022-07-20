@@ -8,8 +8,8 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int xor, one = 1, flips = 0;
-	int i;
+	unsigned long int xor, one = 1;
+	int i, flips = 0;
 
 	xor = n ^ m;
 	for (i = 0; i < 64; i++)

@@ -2,7 +2,7 @@
 #include <fcntl.h>
 #include <string.h>
 /**
- * create_file - creates a text file and write in it
+ * append_text_to_file - appends input string to existing file
  * @filename: string with the name of the file to be used
  * @text_content: string to be written in the file
  *

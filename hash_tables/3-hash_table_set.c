@@ -18,8 +18,12 @@ int add_node(hash_node_t **head, const char *key, const char *value)
 	if (!prev)
 		return (0);
 	prev->key = malloc(strlen(key) + 1);
+	if (!prev->key)
+		return (0);
 	strcpy(prev->key, key);
 	prev->value = malloc(strlen(value) + 1);
+	if (!prev->value)
+		return (0);
 	strcpy(prev->value, value);
 	prev->next = (*head);
 	(*head) = prev;
@@ -37,6 +41,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int success = 0;
 	unsigned long int index;
+
+	if (!ht)
+		return (success);
 
 	/*printf("%s, %s, %ld\n", key, value, ht->size);*/
 	index = key_index((unsigned char *)key, ht->size);

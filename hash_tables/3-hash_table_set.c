@@ -48,7 +48,7 @@ int add_node(hash_node_t **head, const char *key, const char *value)
 	strcpy(prev->value, value);
 	prev->next = (*head);
 	(*head) = prev;
-	if ((*head)->next)
+	if ((*head)->next && !strcmp((*head)->key, (*head)->next->key))
 	{
 		deleted = delete_last(head);
 		if (!deleted)

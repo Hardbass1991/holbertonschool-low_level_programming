@@ -3,6 +3,26 @@
 #include <string.h>
 #include "hash_tables.h"
 /**
+ * delete - deletes a node in input index of linked list
+ * @head: pointer to input linked list
+ * @index: position where new node will be inserted
+ *
+ * Return: 1 if it succeeded, 0 otherwise
+ */
+int delete_last(hash_node_t **head)
+{
+	hash_node_t *ptr;
+
+	if (!(*head))
+		return (0);
+	ptr = malloc(sizeof(hash_node_t));
+	if (!ptr)
+		return (0);
+	ptr = (*head);
+	ptr->next = ptr->next->next;
+	return (1);
+}
+/**
  * add_node - adds node at the beginning of a linked list
  * @head: pointer to head of list
  * @key: attribute key
@@ -12,6 +32,7 @@
  */
 int add_node(hash_node_t **head, const char *key, const char *value)
 {
+	int deleted;
 	hash_node_t *prev;
 
 	prev = malloc(sizeof(hash_node_t));
@@ -27,6 +48,12 @@ int add_node(hash_node_t **head, const char *key, const char *value)
 	strcpy(prev->value, value);
 	prev->next = (*head);
 	(*head) = prev;
+	if ((*head)->next)
+	{
+		deleted = delete_last(head);
+		if (!deleted)
+			return (0);
+	}
 	return (1);
 }
 /**

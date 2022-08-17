@@ -3,9 +3,8 @@
 #include <string.h>
 #include "hash_tables.h"
 /**
- * delete - deletes a node in input index of linked list
+ * delete_last - deletes a node in input index of linked list
  * @head: pointer to input linked list
- * @index: position where new node will be inserted
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
